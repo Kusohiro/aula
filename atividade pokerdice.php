@@ -25,6 +25,12 @@ if(isset($_GET['jogador'])){
         echo $vetorJogador[$i]. " ";
     }
 	
+	$contt1 = 0;
+	$contt2 = 0;
+	$contt3 = 0;
+	$contt4 = 0;
+	$contt5 = 0;
+	$contt6 = 0;
 	$cont6 = 0;
 	$cont5 = 0;
 	$cont4 = 0;
@@ -37,6 +43,7 @@ if(isset($_GET['jogador'])){
 	$jogadas4 = 0;
 	$jogadas5 = 0;
 	$jogadas6 = 0;
+	$jogadast = 0;
     foreach($vetorJogador as $dado){
         if($dado == 1){
             $cont1++;
@@ -103,10 +110,48 @@ if(isset($_GET['jogador'])){
 
     echo "<br>Jogadas de 6: $jogadas6";
 	
+	foreach($vetorJogador as $dado){
+		  if($dado == 6){
+            $contt6++;
+        }
+	 if($contt6 == 3){
+        $jogadast = 20; 
+    }
+		  if($dado == 5){
+            $contt5++;
+        }
+	 if($contt5 == 3){
+        $jogadast = 20; 
+    }
+		  if($dado == 4){
+            $contt4++;
+        }
+	 if($contt4 == 3){
+        $jogadast = 20; 
+    }  
+		if($dado == 3){
+            $contt3++;
+        }
+	 if($contt3 == 3){
+        $jogadast = 20; 
+    }  
+		if($dado == 2){
+            $contt2++;
+        }
+	 if($contt2 == 3){
+        $jogadast = 20; 
+    }  
+		if($dado == 1){
+            $contt1++;
+        }
+	 if($contt1 == 3){
+        $jogadast = 20; 
+    }
+	}
+	echo "<br>Trinca: $jogadast";
 	
 	
 	
-}
-?>
+}?>
 </body>
 <html>
