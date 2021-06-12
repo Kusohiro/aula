@@ -19,12 +19,23 @@ if(isset($_GET['jogador'])){
 <?php
 	echo $jogador, ":";
 if(isset($_GET['jogador'])){
-    $vetorJogador = array();
     for($i = 0; $i < 5; $i++){
         $vetorJogador[$i] = rand(1,6);
         echo $vetorJogador[$i]. " ";
     }
 	
+	$conta1 = 0;
+	$conta2= 0;
+	$conta3 = 0;
+	$conta4 = 0;
+	$conta5 = 0;
+	$conta6 = 0;
+	$contq1 = 0;
+	$contq2 = 0;
+	$contq3 = 0;
+	$contq4 = 0;
+	$contq5 = 0;
+	$contq6 = 0;
 	$contt1 = 0;
 	$contt2 = 0;
 	$contt3 = 0;
@@ -44,6 +55,61 @@ if(isset($_GET['jogador'])){
 	$jogadas5 = 0;
 	$jogadas6 = 0;
 	$jogadast = 0;
+	$jogadasq = 0;
+	$jogadasa = 0;
+	$jogadasa1 = 0;
+	$jogadasa2 = 0;
+	$jogadasa3 = 0;
+	$jogadasa4 = 0;
+	$jogadasa5 = 0;
+	$jogadasa6 = 0;
+	
+	foreach($vetorJogador as $dado){
+		 if($dado == 1){
+            $conta1++;
+        }
+    
+    if($cont1 >= 1){
+        $jogadasa1 = $conta1; 
+    }
+	 if($dado == 2){
+            $conta2++;
+        }
+    
+    if($conta2 >= 1){
+        $jogadasa2 = 2 * $conta2; 
+	}
+    if($dado == 3){
+            $conta3++;
+        }
+    
+    if($conta3 >= 1){
+        $jogadasa3 = 3 * $conta3; 
+	}
+	 if($dado == 4){
+            $conta4++;
+        }
+    
+    if($conta4 >= 1){
+        $jogadasa4 = 4 * $conta4; }
+		 if($dado == 5){
+            $conta5++;
+        }
+    
+    if($conta5 >= 1){
+        $jogadasa5 = 5 * $conta5; }
+		 if($dado == 6){
+            $conta6++;
+        }
+ 
+    if($conta6 >= 1){
+        $jogadasa6 = 6 * $conta6; }
+		
+		
+}	$jogadasa = $jogadasa1 + $jogadasa2 + $jogadasa3 + $jogadasa4 + $jogadasa5 + $jogadasa6;
+	echo "<br>aleatorio: $jogadasa";
+	
+	
     foreach($vetorJogador as $dado){
         if($dado == 1){
             $cont1++;
@@ -150,8 +216,47 @@ if(isset($_GET['jogador'])){
 	}
 	echo "<br>Trinca: $jogadast";
 	
+		foreach($vetorJogador as $dado){
+		  if($dado == 6){
+            $contq6++;
+        }
+	 if($contq6 == 4){
+        $jogadasq = 30; 
+    }
+		  if($dado == 5){
+            $contq5++;
+        }
+	 if($contq5 == 4){
+        $jogadasq = 30; 
+    }
+		  if($dado == 4){
+            $contq4++;
+        }
+	 if($contq4 == 4){
+        $jogadasq = 30; 
+    }  
+		if($dado == 3){
+            $contq3++;
+        }
+	 if($contq3 == 4){
+        $jogadasq = 30; 
+    }  
+		if($dado == 2){
+            $contq2++;
+        }
+	 if($contq2 == 4){
+        $jogadasq = 30; 
+    }  
+		if($dado == 1){
+            $contq1++;
+        }
+	 if($contq1 == 4){
+        $jogadasq = 30; 
+    }
+	}
+	echo "<br>quadra: $jogadasq";
 	
 	
-}?>
+	}?>
 </body>
 <html>
