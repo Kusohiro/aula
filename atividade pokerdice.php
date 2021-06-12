@@ -15,7 +15,9 @@ if(isset($_GET['jogador'])){
 <br><br>
 <input type="submit">
 </form>
+	<hr>
 <?php
+	echo $jogador, ":";
 if(isset($_GET['jogador'])){
     $vetorJogador = array();
     for($i = 0; $i < 5; $i++){
@@ -100,6 +102,10 @@ if(isset($_GET['jogador'])){
     }
 
     echo "<br>Jogadas de 6: $jogadas6";
+	
+	
+	
+	
 }
 ?>
 </body>
