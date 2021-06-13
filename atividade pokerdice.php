@@ -21,7 +21,21 @@ if(isset($_GET['jogador'])){
 if(isset($_GET['jogador'])){
     for($i = 0; $i < 5; $i++){
         $vetorJogador[$i] = rand(1,6);
-        echo $vetorJogador[$i]. " ";
+        
+		 if($vetorJogador[$i] == 1){
+           echo '<img src="1024px-NYCS-bull-trans-1.svg.png" width="50" height="50" >';}
+			 		 if($vetorJogador[$i] == 2){
+						 echo '<img src="1024px-NYCS-bull-trans-2.svg.png" width="50" height="50" >';}
+			if($vetorJogador[$i] == 3){
+				echo '<img src="NYCS-bull-trans-3.svg.png" height="50">';}
+						if($vetorJogador[$i] == 4){
+				echo '<img src="NYCS-bull-trans-4.svg.png" height="50">';}
+						if($vetorJogador[$i] == 5){
+				echo '<img src="NYCS-bull-trans-5.svg.png" height="50">';}
+						if($vetorJogador[$i] == 6){
+				echo '<img src="NYCS-bull-trans-6.svg.png" height="50">';
+        }
+		
     }
 	
 	$contg1 = 0;
@@ -382,7 +396,19 @@ if(isset($_GET['jogador'])){
 if(isset($_GET['jogador'])){
     for($i = 0; $i < 5; $i++){
         $vetorcomputador[$i] = rand(1,6);
-        echo $vetorcomputador[$i]. " ";
+       if($vetorcomputador[$i] == 1){
+           echo '<img src="1024px-NYCS-bull-trans-1.svg.png" width="50" height="50" >';}
+			 		 if($vetorcomputador[$i] == 2){
+						 echo '<img src="1024px-NYCS-bull-trans-2.svg.png" width="50" height="50" >';}
+			if($vetorcomputador[$i] == 3){
+				echo '<img src="NYCS-bull-trans-3.svg.png" height="50">';}
+						if($vetorcomputador[$i] == 4){
+				echo '<img src="NYCS-bull-trans-4.svg.png" height="50">';}
+						if($vetorcomputador[$i] == 5){
+				echo '<img src="NYCS-bull-trans-5.svg.png" height="50">';}
+						if($vetorcomputador[$i] == 6){
+				echo '<img src="NYCS-bull-trans-6.svg.png" height="50">';
+        }
     }
 	
 	$contg1 = 0;
