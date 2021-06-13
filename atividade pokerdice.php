@@ -24,8 +24,14 @@ if(isset($_GET['jogador'])){
         echo $vetorJogador[$i]. " ";
     }
 	
+	$contf1 = 0;
+	$contf2 = 0;
+	$contf3 = 0;
+	$contf4 = 0;
+	$contf5 = 0;
+	$contf6 = 0;
 	$conta1 = 0;
-	$conta2= 0;
+	$conta2 = 0;
 	$conta3 = 0;
 	$conta4 = 0;
 	$conta5 = 0;
@@ -63,6 +69,7 @@ if(isset($_GET['jogador'])){
 	$jogadasa4 = 0;
 	$jogadasa5 = 0;
 	$jogadasa6 = 0;
+	$jogadasf = 0;
 	
 	foreach($vetorJogador as $dado){
 		 if($dado == 1){
@@ -256,6 +263,43 @@ if(isset($_GET['jogador'])){
 	}
 	echo "<br>quadra: $jogadasq";
 	
+	foreach($vetorJogador as $dado){
+		  if($dado == 6){
+            $contt6++;
+			  $contf6++;
+        }
+	 if($contt6 == 3 and $contf6 == 2){$jogadasf = 25;}
+		  if($dado == 5){
+            $contt5++;
+			  			  $contf5++;
+        }
+	 if($contt5 == 3 and $contf5 == 2){$jogadasf = 25;}
+		  if($dado == 4){
+            $contt4++;
+			  			  $contf4++;
+        }
+	 if($contt4 == 3 and $contf4 == 2){$jogadasf = 25;}  
+		if($dado == 3){
+            $contt3++;
+					  $contf3++;
+        }
+	 if($contt3 == 3 and $contf3 == 2){$jogadasf = 25;}  
+		if($dado == 2){
+            $contt2++;
+						  $contf2++;
+        }
+	 if($contt2 == 3 and $contf2 == 2){
+        $jogadasf = 25; 
+    }  
+		if($dado == 1){
+            $contt1++;
+						  $contf1++;
+        }
+	 if($contt1 == 3 and $contf1 == 2){
+        $jogadasf = 25; 
+    }
+	}
+	echo "<br>Full House: $jogadasf";
 	
 	}?>
 </body>
