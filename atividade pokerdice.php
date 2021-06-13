@@ -438,8 +438,8 @@ if(isset($_GET['jogador'])){
 	$jogadaca6 = 0;
 	$jogadacf = 0;
 	$jogadacg = 0;
-	$sequenciaa = 0;
-	$sequenciab = 0;
+	$sequencica = 0;
+	$sequencicb = 0;
 	
 	foreach($vetorcomputador as $dado){
 		 if($dado == 1){
@@ -687,11 +687,11 @@ if(isset($_GET['jogador'])){
 			$cont6++;}
 	}
 	if($cont1 ==1 and $count2==1 and $count3==1 and $cont4==1 and $count5==1){
-		$sequenciaa = 40;
+		$sequencica = 40;
 		echo"<br>Sequencia baixa: 40";
 	}else echo"<br>Sequencia baixa: 0";
 		if($cont2 ==1 and $count3==1 and $count4==1 and $cont5==1 and $count6==1){
-			$sequenciab = 30;
+			$sequencicb = 30;
 		echo"<br>Sequencia alta: 30";
 	}else echo"<br>Sequencia alta: 0";
 	foreach($vetorcomputador as $dado){
@@ -735,7 +735,7 @@ if(isset($_GET['jogador'])){
 	echo "<br>general: $jogadacg";
 	
 	echo "<hr>";
-	$totalc = $jogadacq + $jogadact + $jogadacg + $jogadacf + $jogadaca + $sequenciaa + $sequenciab + $jogadac1 + $jogadac2 + $jogadac3 + $jogadac4 + $jogadac5 + $jogadac6;
+	$totalc = $jogadacq + $jogadact + $jogadacg + $jogadacf + $jogadaca + $sequencica + $sequencicb + $jogadac1 + $jogadac2 + $jogadac3 + $jogadac4 + $jogadac5 + $jogadac6;
 	echo "<br>Total: $totalc";
 	
 if($total > $totalc){
@@ -744,6 +744,7 @@ if($total > $totalc){
 	echo "<br><h2>vencedor:computador<h2>";
 }else echo "<br><h2>empate";
 }?>
+
 	
 	          <table border="1">
 	<thead>
@@ -756,47 +757,77 @@ if($total > $totalc){
 	<tbody>
 				  <tr>
 		<th>jogadas de 1</th>
-		<th><?php echo $jogadas1?></th>
-		<th><?php echo $jogadac1?></th>		  
+		<th><?php if(isset($_GET['jogador'])){echo $jogadas1;}?></th>
+		<th><?php if(isset($_GET['jogador'])){echo $jogadac1;}?></th>		  
 		</tr>
 				  <tr>
 		<th>jogadas de 2</th>
-		<th><?php echo $jogadas2?></th>
-		<th><?php echo $jogadac2?></th>	
+		<th><?php if(isset($_GET['jogador'])){echo $jogadas2;}?></th>
+		<th><?php if(isset($_GET['jogador'])){echo $jogadac2;}?></th>	
 		</tr>
 				  <tr>
 		<th>jogadas de 3</th>
-		<th><?php echo $jogadas3?></th>
-		<th><?php echo $jogadac3?></th>	
+		<th><?php if(isset($_GET['jogador'])){echo $jogadas3;}?></th>
+		<th><?php if(isset($_GET['jogador'])){echo $jogadac3;}?></th>	
 		</tr>
 		 <tr>
 		<th>jogadas de 4</th>
-		<th><?php echo $jogadas4?></th>
-		<th><?php echo $jogadac4?></th>	
+		<th><?php if(isset($_GET['jogador'])){echo $jogadas4;}?></th>
+		<th><?php if(isset($_GET['jogador'])){echo $jogadac4;}?></th>	
 		</tr>
 		 <tr>
 		<th>jogadas de 5</th>
-		<th><?php echo $jogadas5?></th>
-		<th><?php echo $jogadac5?></th>	
+		<th><?php if(isset($_GET['jogador'])){echo $jogadas5;}?></th>
+		<th><?php if(isset($_GET['jogador'])){echo $jogadac5;}?></th>	
 		</tr>
 		 <tr>
 		<th>jogadas de 6</th>
-		<th><?php echo $jogadas6?></th>
-		<th><?php echo $jogadac6?></th>	
+		<th><?php if(isset($_GET['jogador'])){echo $jogadas6;}?></th>
+		<th><?php if(isset($_GET['jogador'])){echo $jogadac6;}?></th>	
 		</tr>
 				<tr>
 		<th>trinca</th>
-		<th><?php echo $jogadast ?></th>
-		<th><?php echo $jogadact ?></th>
+		<th><?php if(isset($_GET['jogador'])){echo $jogadast;} ?></th>
+		<th><?php if(isset($_GET['jogador'])){echo $jogadact;} ?></th>
 		</tr>  
 				  <tr>
 		<th>quadra</th>
-		<th><?php echo $jogadasq ?></th>  
-		<th><?php echo $jogadact ?></th>
+		<th><?php if(isset($_GET['jogador'])){echo $jogadasq;} ?></th>  
+		<th><?php if(isset($_GET['jogador'])){echo $jogadacq;} ?></th>
 		</tr>
-				  
-				  
-				  </tbody>
+				  <tr>
+		<th>full house</th>
+		<th><?php if(isset($_GET['jogador'])){echo $jogadasf;} ?></th>  
+	    <th><?php if(isset($_GET['jogador'])){echo $jogadacf;} ?></th>  
+		</tr>
+				<tr>
+		<th>sequencia baixa</th>
+		<th><?php if(isset($_GET['jogador'])){echo $sequenciaa;} ?></th>
+		<th><?php if(isset($_GET['jogador'])){echo $sequencica;} ?></th>
+		</tr>   
+		<tr>
+		<th>sequencia alta</th>
+		<th><?php if(isset($_GET['jogador'])){echo $sequenciab;} ?></th>
+		<th><?php if(isset($_GET['jogador'])){echo $sequencicb;} ?></th>
+		</tr> 
+		<tr>
+		<th>general</th>
+		<th><?php if(isset($_GET['jogador'])){echo $jogadasg;} ?></th>
+		<th><?php if(isset($_GET['jogador'])){echo $jogadacg;} ?></th>
+		</tr> 
+		<tr>
+		<th>aleatorio</th>
+		<th><?php if(isset($_GET['jogador'])){echo $jogadasa;} ?></th>
+		<th><?php if(isset($_GET['jogador'])){echo $jogadaca;} ?></th>
+		</tr> 
+  </tbody>
+				  <tfoot>
+				  		<tr>
+		<th>total</th>
+		<th><?php if(isset($_GET['jogador'])){echo $total;} ?></th>
+		<th><?php if(isset($_GET['jogador'])){echo $totalc;} ?></th>
+		</tr>
+				  </tfoot>
 	</table>
 </body>
 <html>
