@@ -421,23 +421,23 @@ if(isset($_GET['jogador'])){
 	$cont3 = 0;
 	$cont2 = 0;
     $cont1 = 0;
-    $jogadas1 = 0;
-	$jogadas2 = 0;
-	$jogadas3 = 0;
-	$jogadas4 = 0;
-	$jogadas5 = 0;
-	$jogadas6 = 0;
-	$jogadast = 0;
-	$jogadasq = 0;
-	$jogadasa = 0;
-	$jogadasa1 = 0;
-	$jogadasa2 = 0;
-	$jogadasa3 = 0;
-	$jogadasa4 = 0;
-	$jogadasa5 = 0;
-	$jogadasa6 = 0;
-	$jogadasf = 0;
-	$jogadasg = 0;
+    $jogadac1 = 0;
+	$jogadac2 = 0;
+	$jogadac3 = 0;
+	$jogadac4 = 0;
+	$jogadac5 = 0;
+	$jogadac6 = 0;
+	$jogadact = 0;
+	$jogadacq = 0;
+	$jogadaca = 0;
+	$jogadaca1 = 0;
+	$jogadaca2 = 0;
+	$jogadaca3 = 0;
+	$jogadaca4 = 0;
+	$jogadaca5 = 0;
+	$jogadaca6 = 0;
+	$jogadacf = 0;
+	$jogadacg = 0;
 	$sequenciaa = 0;
 	$sequenciab = 0;
 	
@@ -447,44 +447,44 @@ if(isset($_GET['jogador'])){
         }
     
     if($cont1 >= 1){
-        $jogadasa1 = $conta1; 
+        $jogadaca1 = $conta1; 
     }
 	 if($dado == 2){
             $conta2++;
         }
     
     if($conta2 >= 1){
-        $jogadasa2 = 2 * $conta2; 
+        $jogadaca2 = 2 * $conta2; 
 	}
     if($dado == 3){
             $conta3++;
         }
     
     if($conta3 >= 1){
-        $jogadasa3 = 3 * $conta3; 
+        $jogadaca3 = 3 * $conta3; 
 	}
 	 if($dado == 4){
             $conta4++;
         }
     
     if($conta4 >= 1){
-        $jogadasa4 = 4 * $conta4; }
+        $jogadaca4 = 4 * $conta4; }
 		 if($dado == 5){
             $conta5++;
         }
     
     if($conta5 >= 1){
-        $jogadasa5 = 5 * $conta5; }
+        $jogadaca5 = 5 * $conta5; }
 		 if($dado == 6){
             $conta6++;
         }
  
     if($conta6 >= 1){
-        $jogadasa6 = 6 * $conta6; }
+        $jogadaca6 = 6 * $conta6; }
 		
 		
-}	$jogadasa = $jogadasa1 + $jogadasa2 + $jogadasa3 + $jogadasa4 + $jogadasa5 + $jogadasa6;
-	echo "<br>aleatorio: $jogadasa";
+}	$jogadaca = $jogadaca1 + $jogadaca2 + $jogadaca3 + $jogadaca4 + $jogadaca5 + $jogadaca6;
+	echo "<br>aleatorio: $jogadaca";
 	
 	
     foreach($vetorcomputador as $dado){
@@ -493,10 +493,10 @@ if(isset($_GET['jogador'])){
         }
     }
     if($cont1 > 1){
-        $jogadas1 = $cont1; 
+        $jogadac1 = $cont1; 
     }
 
-    echo "<br>Jogadas de 1: $jogadas1";
+    echo "<br>Jogadas de 1: $jogadac1";
 	
 	foreach($vetorcomputador as $dado){
         if($dado == 2){
@@ -504,10 +504,10 @@ if(isset($_GET['jogador'])){
         }
     }
     if($cont2 > 1){
-        $jogadas2 = 2 * $cont2; 
+        $jogadac2 = 2 * $cont2; 
     }
 
-    echo "<br>Jogadas de 2: $jogadas2";
+    echo "<br>Jogadas de 2: $jogadac2";
 	
 	foreach($vetorcomputador as $dado){
         if($dado == 3){
@@ -515,10 +515,10 @@ if(isset($_GET['jogador'])){
         }
     }
     if($cont3 > 1){
-        $jogadas3 = 3 * $cont3; 
+        $jogadac3 = 3 * $cont3; 
     }
 
-    echo "<br>Jogadas de 3: $jogadas3";
+    echo "<br>Jogadas de 3: $jogadac3";
 	
 	foreach($vetorcomputador as $dado){
         if($dado == 4){
@@ -526,10 +526,10 @@ if(isset($_GET['jogador'])){
         }
     }
     if($cont4 > 1){
-        $jogadas4 = 4 * $cont4; 
+        $jogadac4 = 4 * $cont4; 
     }
 
-    echo "<br>Jogadas de 4: $jogadas4";
+    echo "<br>Jogadas de 4: $jogadac4";
 
 	foreach($vetorcomputador as $dado){
         if($dado == 5){
@@ -537,10 +537,10 @@ if(isset($_GET['jogador'])){
         }
     }
     if($cont5 > 1){
-        $jogadas5 = 5 * $cont5; 
+        $jogadac5 = 5 * $cont5; 
     }
 
-    echo "<br>Jogadas de 5: $jogadas5";
+    echo "<br>Jogadas de 5: $jogadac5";
 	
 	foreach($vetorcomputador as $dado){
         if($dado == 6){
@@ -548,128 +548,128 @@ if(isset($_GET['jogador'])){
         }
     }
     if($cont6 > 1){
-        $jogadas6 = 6 * $cont6; 
+        $jogadac6 = 6 * $cont6; 
     }
 
-    echo "<br>Jogadas de 6: $jogadas6";
+    echo "<br>Jogadas de 6: $jogadac6";
 	
 	foreach($vetorcomputador as $dado){
 		  if($dado == 6){
             $contt6++;
         }
 	 if($contt6 == 3){
-        $jogadast = 20; 
+        $jogadact = 20; 
     }
 		  if($dado == 5){
             $contt5++;
         }
 	 if($contt5 == 3){
-        $jogadast = 20; 
+        $jogadact = 20; 
     }
 		  if($dado == 4){
             $contt4++;
         }
 	 if($contt4 == 3){
-        $jogadast = 20; 
+        $jogadact = 20; 
     }  
 		if($dado == 3){
             $contt3++;
         }
 	 if($contt3 == 3){
-        $jogadast = 20; 
+        $jogadact = 20; 
     }  
 		if($dado == 2){
             $contt2++;
         }
 	 if($contt2 == 3){
-        $jogadast = 20; 
+        $jogadact = 20; 
     }  
 		if($dado == 1){
             $contt1++;
         }
 	 if($contt1 == 3){
-        $jogadast = 20; 
+        $jogadact = 20; 
     }
 	}
-	echo "<br>Trinca: $jogadast";
+	echo "<br>Trinca: $jogadact";
 	
 		foreach($vetorcomputador as $dado){
 		  if($dado == 6){
             $contq6++;
         }
 	 if($contq6 == 4){
-        $jogadasq = 30; 
+        $jogadacq = 30; 
     }
 		  if($dado == 5){
             $contq5++;
         }
 	 if($contq5 == 4){
-        $jogadasq = 30; 
+        $jogadacq = 30; 
     }
 		  if($dado == 4){
             $contq4++;
         }
 	 if($contq4 == 4){
-        $jogadasq = 30; 
+        $jogadacq = 30; 
     }  
 		if($dado == 3){
             $contq3++;
         }
 	 if($contq3 == 4){
-        $jogadasq = 30; 
+        $jogadacq = 30; 
     }  
 		if($dado == 2){
             $contq2++;
         }
 	 if($contq2 == 4){
-        $jogadasq = 30; 
+        $jogadacq = 30; 
     }  
 		if($dado == 1){
             $contq1++;
         }
 	 if($contq1 == 4){
-        $jogadasq = 30; 
+        $jogadacq = 30; 
     }
 	}
-	echo "<br>quadra: $jogadasq";
+	echo "<br>quadra: $jogadacq";
 	
 	foreach($vetorcomputador as $dado){
 		  if($dado == 6){
            
 			  $contf6++;
         }
-	 if($contt6 == 3 ) {if($contf2 == 2 or $contf3 == 2 or $contf4 == 2 or $contf5 == 2 or $contf1 == 2){$jogadasf = 25;}}
+	 if($contt6 == 3 ) {if($contf2 == 2 or $contf3 == 2 or $contf4 == 2 or $contf5 == 2 or $contf1 == 2){$jogadacf = 25;}}
 		  if($dado == 5){
      
 			  			  $contf5++;
         }
-	 if($contt5 == 3 ) {if($contf2 == 2 or $contf3 == 2 or $contf4 == 2 or $contf1 == 2 or $contf6 == 2){$jogadasf = 25;}}
+	 if($contt5 == 3 ) {if($contf2 == 2 or $contf3 == 2 or $contf4 == 2 or $contf1 == 2 or $contf6 == 2){$jogadacf = 25;}}
 		  if($dado == 4){
             
 			  			  $contf4++;
         }
-	 if($contt4 == 3 ) {if($contf2 == 2 or $contf3 == 2 or $contf1 == 2 or $contf5 == 2 or $contf6 == 2){$jogadasf = 25;} } 
+	 if($contt4 == 3 ) {if($contf2 == 2 or $contf3 == 2 or $contf1 == 2 or $contf5 == 2 or $contf6 == 2){$jogadacf = 25;} } 
 		if($dado == 3){
           
 					  $contf3++;
         }
-	 if($contt3 == 3) {if($contf2 == 2 or $contf1 == 2 or $contf4 == 2 or $contf5 == 2 or $contf6 == 2){$jogadasf = 25;}  }
+	 if($contt3 == 3) {if($contf2 == 2 or $contf1 == 2 or $contf4 == 2 or $contf5 == 2 or $contf6 == 2){$jogadacf = 25;}  }
 		if($dado == 2){
            
 						  $contf2++;
         }
 	 if($contt2 == 3 ) {if($contf1 == 2 or $contf3 == 2 or $contf4 == 2 or $contf5 == 2 or $contf6 == 2){
-        $jogadasf = 25; 
+        $jogadacf = 25; 
     }  }
 		if($dado == 1){
             
 						  $contf1++;
         }
 	 if($contt1 == 3 ) {if($contf2 == 2 or $contf3 == 2 or $contf4 == 2 or $contf5 == 2 or $contf6 == 2){
-        $jogadasf = 25; 
+        $jogadacf = 25; 
     }
 	}}
-	echo "<br>Full House: $jogadasf";
+	echo "<br>Full House: $jogadacf";
 	
 	foreach($vetorcomputador as $dado){
 		if($dado == 1){
@@ -699,43 +699,43 @@ if(isset($_GET['jogador'])){
             $contg6++;
         }
 	 if($contg6 == 5){
-        $jogadasg = 50; 
+        $jogadacg = 50; 
     }
 		  if($dado == 5){
             $contg5++;
         }
 	 if($contg5 == 5){
-        $jogadasg = 50; 
+        $jogadacg = 50; 
     }
 		  if($dado == 4){
             $contg4++;
         }
 	 if($contg4 == 5){
-        $jogadasg = 50; 
+        $jogadacg = 50; 
     }  
 		if($dado == 3){
             $contg3++;
         }
 	 if($contg3 == 5){
-        $jogadasg = 50; 
+        $jogadacg = 50; 
     }  
 		if($dado == 2){
             $contg2++;
         }
 	 if($contg2 == 5){
-        $jogadasg = 50; 
+        $jogadacg = 50; 
     }  
 		if($dado == 1){
             $contg1++;
         }
 	 if($contg1 == 5){
-        $jogadasg = 50; 
+        $jogadacg = 50; 
     }
 	}
-	echo "<br>general: $jogadasg";
+	echo "<br>general: $jogadacg";
 	
 	echo "<hr>";
-	$totalc = $jogadasq + $jogadast + $jogadasg + $jogadasf + $jogadasa + $sequenciaa + $sequenciab + $jogadas1 + $jogadas2 + $jogadas3 + $jogadas4 + $jogadas5 + $jogadas6;
+	$totalc = $jogadacq + $jogadact + $jogadacg + $jogadacf + $jogadaca + $sequenciaa + $sequenciab + $jogadac1 + $jogadac2 + $jogadac3 + $jogadac4 + $jogadac5 + $jogadac6;
 	echo "<br>Total: $totalc";
 	
 if($total > $totalc){
@@ -744,5 +744,59 @@ if($total > $totalc){
 	echo "<br><h2>vencedor:computador<h2>";
 }else echo "<br><h2>empate";
 }?>
+	
+	          <table border="1">
+	<thead>
+				  <tr>
+		<th>pontos</th>
+		<th><?php echo $jogador?></th>
+		<th>computador</th>
+		</tr>
+				  </thead>
+	<tbody>
+				  <tr>
+		<th>jogadas de 1</th>
+		<th><?php echo $jogadas1?></th>
+		<th><?php echo $jogadac1?></th>		  
+		</tr>
+				  <tr>
+		<th>jogadas de 2</th>
+		<th><?php echo $jogadas2?></th>
+		<th><?php echo $jogadac2?></th>	
+		</tr>
+				  <tr>
+		<th>jogadas de 3</th>
+		<th><?php echo $jogadas3?></th>
+		<th><?php echo $jogadac3?></th>	
+		</tr>
+		 <tr>
+		<th>jogadas de 4</th>
+		<th><?php echo $jogadas4?></th>
+		<th><?php echo $jogadac4?></th>	
+		</tr>
+		 <tr>
+		<th>jogadas de 5</th>
+		<th><?php echo $jogadas5?></th>
+		<th><?php echo $jogadac5?></th>	
+		</tr>
+		 <tr>
+		<th>jogadas de 6</th>
+		<th><?php echo $jogadas6?></th>
+		<th><?php echo $jogadac6?></th>	
+		</tr>
+				<tr>
+		<th>trinca</th>
+		<th><?php echo $jogadast ?></th>
+		<th><?php echo $jogadact ?></th>
+		</tr>  
+				  <tr>
+		<th>quadra</th>
+		<th><?php echo $jogadasq ?></th>  
+		<th><?php echo $jogadact ?></th>
+		</tr>
+				  
+				  
+				  </tbody>
+	</table>
 </body>
 <html>
