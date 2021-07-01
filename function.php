@@ -1,5 +1,10 @@
 <?php 
-
+$rand1 = 0;
+$rand2 = 0;
+$rand3 = 0;
+$rand4 = 0;
+$rand5 = 0;
+$rand6 = 0;
 	
 function sortear($nun){
 	$cartas = array();
@@ -37,11 +42,14 @@ $rand6 = rand (1, 13);
 } while ($rand6 == $rand1 || $rand6 == $rand2 || $rand6 == $rand3 || $rand6 == $rand4 || $rand6 == $rand5);
 echo " ".$rand6." ";
 }
-
+		$soma = $rand1 + $rand2 + $rand3 + $rand4 + $rand5 + $rand6;
+	echo "<br> soma das cartas: ".$soma;
 return;
 }
 	for ($x = 0; $x < $nun; $x++)
-		
+	
+		if($x > 0)
+		if($x >= 2)
 		$n[]= ($rand1 and $rand2);
 		if($x >= 3){
 		$n[]= ($rand1 and $rand2 and $rand3);}
@@ -51,10 +59,10 @@ return;
 		$n[]= ($rand1 and $rand2 and $rand3 and $rand4 and $rand5);}
 		if($x >= 6){
 		$n[]= ($rand1 and $rand2 and $rand3 and $rand4 and $rand5 and $rand6);}
+				sort($n);
 	$cartas[] = $n;
-	sort($cartas);
+
 		return $cartas;
 	}
-
 
 ?>
