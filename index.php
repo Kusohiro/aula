@@ -15,6 +15,10 @@ if(isset($_GET['nun'])){
 if(isset($_GET['naipe'])){
     $naipe = $_GET['naipe'];
 }
+	$acao = "";
+if(isset($_GET['acao'])){
+    $acao = $_GET['acao'];
+}
 	?>
 <title>jogo de cartas simples</title>
 <link href="css jogo cartas.css" rel="stylesheet" type="text/css">
@@ -36,19 +40,31 @@ if(isset($_GET['naipe'])){
 	<option value=6 <?php if($nun == 6) echo "selected" ;?>>6</option>
 	</select>
 		<br>
-	<select name="naipe" id="naipe">
-	<option value="copas"<?php if($naipe == "copas") echo "selected" ;?>>copas</option>
-	<option value="ouro"<?php if($naipe == "ouro") echo "selected" ;?>>ouro</option>
-	<option value="espada"<?php if($naipe == "espada") echo "selected" ;?>>espada</option>
-		<option value="paus"<?php if($naipe == "paus") echo "selected" ;?>>paus</option>
-		</select>
+	<input type="radio" name="naipe" id="naipe" value="copas"<?php if($naipe == "copas") echo "checked" ;?>/>copas
+	<input type="radio" name="naipe" id="naipe" value="ouro"<?php if($naipe == "ouro") echo "checked" ;?>/>ouro 
+	<input type="radio" name="naipe" id="naipe" value="espada"<?php if($naipe == "espada") echo "checked" ;?>/> espada 
+	<input type="radio" name="naipe" id="naipe" value="paus"<?php if($naipe == "paus") echo "checked" ;?>/> paus
 		<br>
-	<input type="submit" value="sortear">
+		<button type="submit" name="acao" id="acao" value="sortear">sortear</button>
 	</form>
 	<?php	
-	echo "nome: ", $jogador,"<br> numero de cartas sorteadas: ", $nun, "<br> cartas sorteadas: ";
+	if($acao = "sortear"){
+	echo "nome: ", $jogador,"<br> numero de cartas sorteadas: ", $nun, "<br> naipe: ", $naipe,"<br> cartas sorteadas: ";
 	$b=sortear($nun);
 	var_export($b, true);
-	?>
+		
+		if($naipe = "ouro")
+		$naipec = "paus" or "espada" or "copas";
+		if($naipe = "paus")
+		$naipec = "ouro" or "espada" or "copas";
+		if($naipe = "espada")
+		$naipec = "paus" or "ouro" or "copas";
+		if($naipe = "copas")
+		$naipec = "paus" or "espada" or "ouro";
+	echo "<br> nome: ", "computador","<br> numero de cartas sorteadas: ", $nun, "<br> naipe: ", $naipec, "<br> cartas sorteadas: ";
+	$c=sortearc($nun);
+	var_export($c, true);}
+	
+		?>
 </body>
 </html>
