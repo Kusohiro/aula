@@ -5,12 +5,15 @@
 <title>jogo do bicho</title>
 </head>
 <?php 
+	$milhar = 0;
 	$animal = array("avestruz","aguia","burro","borboleta","cachorro","cabra","carneiro","camelo","cobra","coelho","cavalo","elefante","galo","gato","jacare","leão","macaco","porco","pavão","peru","touro","tigre","urso","veado","vaca");
 	$bicho = isset($_GET['bicho']) ? $_GET['bicho'] : "";
 	$aposta = isset($_GET['aposta']) ? $_GET['aposta'] : ""
 	?>
 <body>
-	 <?php include "menu.php" ?>
+	<?php include "menu.php";
+	include "funções.php";
+	?>
 	<form method="get">
 	valor de aposta (r$):<input type="text" name="aposta" id="aposta" <?php if(isset($_GET['aposta'])) echo "value='", $aposta, "'"?></input> <br>
 	bicho:   <select name="bicho" id="bicho">
@@ -27,6 +30,11 @@
         </select>
 	<input type="submit" value="jogar">
 	</form>
-	<?php echo $bicho, "<br>",$aposta; ?>
+	<?php echo $bicho, "<br>",$aposta, "<br>"; 
+	for($x = 0; $x < 5; $x++){
+	sorteio($milhar, $bicho);
+		
+	}
+	?>
 </body>
 </html>
