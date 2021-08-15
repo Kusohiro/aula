@@ -1,5 +1,5 @@
 <?php
-function sorteio($milhar, $bicho){
+function sorteio($milhar, $bicho, $aposta, $x){
 	$n1 = rand(0,9); $n2 = rand(0,9); $n3= rand(0,9); $n4 = rand(0,9);
 	$sorteio = $n1;
 	$sorteio .= $n2;
@@ -9,13 +9,23 @@ function sorteio($milhar, $bicho){
 	$final = $n3;
 	$final .= $n4;
 	echo $sorteio, "<br>", $final, "<br>";
-	
-	//if($milhar == $sorteio){$vencer = 1; return($vencer);}
-	vencedor($final);
-	
-}
+	vencedor($final, $bicho, $x, $aposta);
+	if($milhar == $sorteio){
+	if($x == 0){ $premio = $aposta * 35;
+			  echo $premio, "<br><br>";
+			  }
+	elseif($x == 1){ $premio = $aposta * 30;		  
+			  echo $premio, "<br><br>";}
+			elseif($x == 2){ $premio = $aposta * 25;		  
+			  echo $premio, "<br><br>";}
+			elseif($x == 3){ $premio = $aposta * 20;		  
+			  echo $premio, "<br><br>";}
+			elseif($x == 4){ $premio = $aposta * 15;		  
+			  echo $premio, "<br><br>";}
+			  }}
 
-function vencedor($final){
+
+function vencedor($final, $bicho, $x, $aposta){
 	$avestruz = array( 1,2,3,4);
 	$aguia = array(5,6,7,8);
 	$burro = array(9,10,11,12);
@@ -42,60 +52,80 @@ function vencedor($final){
 	$veado = array(93,94,95,96);
 	$vaca = array(97,98,99,00);
 	
-	for ($x = 0; $x < count($avestruz); $x++){
-	if($avestruz[$x] == $final){$vencedor = "vaca"; echo "avestruz <br><br>";}}
-	for ($x = 0; $x < count($aguia); $x++){
-	if($aguia[$x] == $final){ $vencedor = "vaca";echo "aguia <br><br>";}}
-	for ($x = 0; $x < count($burro); $x++){
-	if($burro[$x] == $final){$vencedor = "vaca"; echo "burro <br><br>";}}
-	for ($x = 0; $x < count($borboleta); $x++){
-	if($borboleta[$x] == $final){$vencedor = "vaca";echo "borboleta <br><br>";}}
-	for ($x = 0; $x < count($cachorro); $x++){
-	if($cachorro[$x] == $final){ $vencedor = "vaca";echo "cachorro <br><br>";}}
-	for ($x = 0; $x < count($cabra); $x++){
-	if($cabra[$x] == $final){$vencedor = "vaca"; echo "cabra <br><br>";}}
-	for ($x = 0; $x < count($carneiro); $x++){
-	if($carneiro[$x] == $final){$vencedor = "vaca";echo "carneiro <br><br>";}}
-	for ($x = 0; $x < count($camelo); $x++){
-	if($camelo[$x] == $final){ $vencedor = "vaca";echo "camelo <br><br>";}}
-	for ($x = 0; $x < count($cobra); $x++){
-	if($cobra[$x] == $final){$vencedor = "vaca"; echo "cobra <br><br>";}}
-	for ($x = 0; $x < count($coelho); $x++){
-	if($coelho[$x] == $final){$vencedor = "vaca"; echo "coelho <br><br>";}}
-	for ($x = 0; $x < count($cavalo); $x++){
-	if($cavalo[$x] == $final){$vencedor = "vaca"; echo "cavalo <br><br>";}}
-	for ($x = 0; $x < count($elefante); $x++){
-	if($elefante[$x] == $final){$vencedor = "vaca";echo "elefante <br><br>";}}
-	for ($x = 0; $x < count($galo); $x++){
-	if($galo[$x] == $final){$vencedor = "vaca"; echo "galo <br><br>";}}
-	for ($x = 0; $x < count($gato); $x++){
-	if($gato[$x] == $final){ $vencedor = "vaca";echo "gato <br><br>";}}
-	for ($x = 0; $x < count($jacare); $x++){
-	if($jacare[$x] == $final){$vencedor = "vaca"; echo "jacare <br><br>";}}
-	for ($x = 0; $x < count($leao); $x++){
-	if($leao[$x] == $final){$vencedor = "vaca"; echo "leao <br><br>";}}
-	for ($x = 0; $x < count($macaco); $x++){
-	if($macaco[$x] == $final){$vencedor = "vaca"; echo "macaco <br><br>";}}
-	for ($x = 0; $x < count($porco); $x++){
-	if($porco[$x] == $final){$vencedor = "vaca";echo "porco <br><br>";}}
-	for ($x = 0; $x < count($pavao); $x++){
-	if($pavao[$x] == $final){$vencedor = "vaca"; echo "pavao <br><br>";}}
-	for ($x = 0; $x < count($peru); $x++){
-	if($peru[$x] == $final){$vencedor = "vaca"; echo "peru <br><br>";}}
-	for ($x = 0; $x < count($touro); $x++){
-	if($touro[$x] == $final){$vencedor = "vaca"; echo "touro <br><br>";}}
-	for ($x = 0; $x < count($tigre); $x++){
-	if($tigre[$x] == $final){$vencedor = "vaca"; echo "tigre <br><br>";}}
-	for ($x = 0; $x < count($urso); $x++){
-	if($urso[$x] == $final){$vencedor = "vaca";echo "urso <br><br>";}}
-	for ($x = 0; $x < count($veado); $x++){
-	if($veado[$x] == $final){ $vencedor = "vaca";echo "veado <br><br>";}}
-	for ($x = 0; $x < count($vaca); $x++){
-	if($vaca[$x] == $final){$vencedor = "vaca";  echo "vaca <br><br>";}}
-
+	for ($xy = 0; $xy < count($avestruz); $xy++){
+	if($avestruz[$xy] == $final){ echo "avestruz <br>"; jogador("avestruz", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($aguia); $xy++){
+	if($aguia[$xy] == $final){ echo "aguia <br>"; jogador("aguia", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($burro); $xy++){
+	if($burro[$xy] == $final){ echo "burro <br>"; jogador("burro", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($borboleta); $xy++){
+	if($borboleta[$xy] == $final){echo "borboleta <br>"; jogador("borboleta", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($cachorro); $xy++){
+	if($cachorro[$xy] == $final){ echo "cachorro <br>"; jogador("cachorro", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($cabra); $xy++){
+	if($cabra[$xy] == $final){ echo "cabra <br>"; jogador("cabra", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($carneiro); $xy++){
+	if($carneiro[$xy] == $final){echo "carneiro <br>"; jogador("carneiro", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($camelo); $xy++){
+	if($camelo[$xy] == $final){ echo "camelo <br>"; jogador("camelo", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($cobra); $xy++){
+	if($cobra[$xy] == $final){ echo "cobra <br>"; jogador("cobra", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($coelho); $xy++){
+	if($coelho[$xy] == $final){ echo "coelho <br>"; jogador("coelho", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($cavalo); $xy++){
+	if($cavalo[$xy] == $final){ echo "cavalo <br>"; jogador("cavalo", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($elefante); $xy++){
+	if($elefante[$xy] == $final){echo "elefante <br>"; jogador("elefante", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($galo); $xy++){
+	if($galo[$xy] == $final){ echo "galo <br>"; jogador("galo", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($gato); $xy++){
+	if($gato[$xy] == $final){ echo "gato <br>"; jogador("gato", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($jacare); $xy++){
+	if($jacare[$xy] == $final){ echo "jacare <br>"; jogador("jacare", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($leao); $xy++){
+	if($leao[$xy] == $final){ echo "leao <br>"; jogador("leão", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($macaco); $xy++){
+	if($macaco[$xy] == $final){ echo "macaco <br>"; jogador("macaco", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($porco); $xy++){
+	if($porco[$xy] == $final){echo "porco <br>"; jogador("porco", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($pavao); $xy++){
+	if($pavao[$xy] == $final){ echo "pavao <br>"; jogador("pavao", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($peru); $xy++){
+	if($peru[$xy] == $final){ echo "peru <br>"; jogador("peru", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($touro); $xy++){
+	if($touro[$xy] == $final){ echo "touro <br>"; jogador("touro", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($tigre); $xy++){
+	if($tigre[$xy] == $final){ echo "tigre <br>"; jogador("tigre", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($urso); $xy++){
+	if($urso[$xy] == $final){echo "urso <br>"; jogador("urso", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($veado); $xy++){
+	if($veado[$xy] == $final){ echo "veado <br>"; jogador("veado", $bicho, $x, $aposta);}}
+	for ($xy = 0; $xy < count($vaca); $xy++){
+	if($vaca[$xy] == $final){  echo "vaca <br>"; jogador("vaca", $bicho, $x, $aposta);}}
 }
 
+function jogador($ser, $bicho, $x, $aposta){
+	if($ser == $bicho){
+		if($x == 0){ $premio = $aposta * 15;
+			  echo $premio, "<br><br>";
+			  }
+	elseif($x == 1){ $premio = $aposta * 5;		  
+			  echo $premio, "<br><br>";}
+			elseif($x == 2){ $premio = $aposta * 4;		  
+			  echo $premio, "<br><br>";}
+			elseif($x == 3){ $premio = $aposta * 3;		  
+			  echo $premio, "<br><br>";}
+			elseif($x == 4){ $premio = $aposta * 2;		  
+			  echo $premio, "<br><br>";}
+			  }
+}
 
-
-
+function checagem($bicho,$aposta, $milhar){
+	for($x = 0; $x < 5; $x++){
+	sorteio($milhar, $bicho, $aposta, $x);
+}}
+function checagemm($bicho,$aposta, $milhar){
+	for($x = 0; $x < 5; $x++){
+	sorteio($milhar, $bicho, $aposta, $x);
+	}}
 ?>
