@@ -8,7 +8,12 @@ function sorteio($milhar, $bicho, $aposta, $x){
 	//$sorteio = 6244;
 	$final = $n3;
 	$final .= $n4;
-	echo $sorteio, "<br>", $final, "<br>";
+	if($x == 0){  echo "1° Premio - ", $sorteio, " - ";
+			  }
+	elseif($x == 1){  echo "2° Premio - ", $sorteio, " - ";;}
+			elseif($x == 2){  echo "3° Premio - ", $sorteio, " - ";}
+			elseif($x == 3){  echo "4° Premio - ", $sorteio, " - ";}
+			elseif($x == 4){ echo "5° Premio - ", $sorteio, " - ";}
 	vencedor($final, $bicho, $x, $aposta);
 	if($milhar == $sorteio){
 	if($x == 0){ $premio = $aposta * 35;
