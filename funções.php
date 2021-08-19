@@ -57,56 +57,31 @@ function vencedor($final, $bicho, $x, $aposta){
 	$veado = array(93,94,95,96);
 	$vaca = array(97,98,99,00);
 	
-	for ($xy = 0; $xy < count($avestruz); $xy++){
-	if($avestruz[$xy] == $final){ echo "<img src='imagems/avestruz.png' height='100' width='100'> <br>"; jogador("avestruz", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($aguia); $xy++){
-	if($aguia[$xy] == $final){ echo "<img src='imagems/aguia.png' height='100' width='100'> <br>"; jogador("aguia", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($burro); $xy++){
-	if($burro[$xy] == $final){ echo "<img src='imagems/burro.png' height='100' width='100'> <br>"; jogador("burro", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($borboleta); $xy++){
-	if($borboleta[$xy] == $final){echo "<img src='imagems/borboleta.png' height='100' width='100'> <br>"; jogador("borboleta", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($cachorro); $xy++){
-	if($cachorro[$xy] == $final){ echo "<img src='imagems/cachorro.png' height='100' width='100'> <br>"; jogador("cachorro", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($cabra); $xy++){
-	if($cabra[$xy] == $final){ echo "<img src='imagems/cabra.png' height='100' width='100'> <br>"; jogador("cabra", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($carneiro); $xy++){
-	if($carneiro[$xy] == $final){echo "<img src='imagems/carneiro.png' height='100' width='100'> <br>"; jogador("carneiro", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($camelo); $xy++){
-	if($camelo[$xy] == $final){ echo "<img src='imagems/camelo.png' height='100' width='100'> <br>"; jogador("camelo", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($cobra); $xy++){
-	if($cobra[$xy] == $final){ echo "<img src='imagems/cobra.png' height='100' width='100'> <br>"; jogador("cobra", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($coelho); $xy++){
-	if($coelho[$xy] == $final){ echo "<img src='imagems/coelho.png' height='100' width='100'> <br>"; jogador("coelho", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($cavalo); $xy++){
-	if($cavalo[$xy] == $final){ echo "<img src='imagems/cavalo.png' height='100' width='100'> <br>"; jogador("cavalo", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($elefante); $xy++){
-	if($elefante[$xy] == $final){echo "<img src='imagems/elefante.png' height='100' width='100'> <br>"; jogador("elefante", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($galo); $xy++){
-	if($galo[$xy] == $final){ echo "<img src='imagems/galo.png' height='100' width='100'> <br>"; jogador("galo", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($gato); $xy++){
-	if($gato[$xy] == $final){ echo "<img src='imagems/gato.png' height='100' width='100'> <br>"; jogador("gato", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($jacare); $xy++){
-	if($jacare[$xy] == $final){ echo "<img src='imagems/jacare.png' height='100' width='100'> <br>"; jogador("jacare", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($leao); $xy++){
-	if($leao[$xy] == $final){ echo "<img src='imagems/leão.png' height='100' width='100'> <br>"; jogador("leão", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($macaco); $xy++){
-	if($macaco[$xy] == $final){ echo "<img src='imagems/macaco.png' height='100' width='100'> <br>"; jogador("macaco", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($porco); $xy++){
-	if($porco[$xy] == $final){echo "<img src='imagems/porco.png' height='100' width='100'> <br>"; jogador("porco", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($pavao); $xy++){
-	if($pavao[$xy] == $final){ echo "<img src='imagems/pavão.png' height='100' width='100'> <br>"; jogador("pavao", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($peru); $xy++){
-	if($peru[$xy] == $final){ echo "<img src='imagems/peru.png' height='100' width='100'> <br>"; jogador("peru", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($touro); $xy++){
-	if($touro[$xy] == $final){ echo "<img src='imagems/touro.png' height='100' width='100'> <br>"; jogador("touro", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($tigre); $xy++){
-	if($tigre[$xy] == $final){ echo "<img src='imagems/tigre.png' height='100' width='100'> <br>"; jogador("tigre", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($urso); $xy++){
-	if($urso[$xy] == $final){echo "<img src='imagems/urso.png' height='100' width='100'> <br>"; jogador("urso", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($veado); $xy++){
-	if($veado[$xy] == $final){ echo "<img src='imagems/veado.png' height='100' width='100'> <br>"; jogador("veado", $bicho, $x, $aposta);}}
-	for ($xy = 0; $xy < count($vaca); $xy++){
-	if($vaca[$xy] == $final){  echo "<img src='imagems/vaca.png' height='100' width='100'> <br>"; jogador("vaca", $bicho, $x, $aposta);}}
+	bicharada($avestruz,$final, $bicho, $x, $aposta, "avestruz");
+	bicharada($aguia,$final, $bicho, $x, $aposta, "aguia");
+	bicharada($burro,$final, $bicho, $x, $aposta, "burro");
+	bicharada($borboleta,$final, $bicho, $x, $aposta, "borboleta");
+	bicharada($cachorro,$final, $bicho, $x, $aposta, "cachorro");
+	bicharada($cabra,$final, $bicho, $x, $aposta, "cabra");
+	bicharada($carneiro,$final, $bicho, $x, $aposta, 'carneiro');
+	bicharada($camelo,$final, $bicho, $x, $aposta, "camelo");
+	bicharada($cobra,$final, $bicho, $x, $aposta, "cobra");
+	bicharada($coelho,$final, $bicho, $x, $aposta, "coelho");
+	bicharada($cavalo,$final, $bicho, $x, $aposta, "cavalo");
+	bicharada($elefante,$final, $bicho, $x, $aposta, "elefante");
+	bicharada($galo,$final, $bicho, $x, $aposta, "galo");
+	bicharada($gato,$final, $bicho, $x, $aposta, "gato");
+	bicharada($jacare,$final, $bicho, $x, $aposta, "jacare");
+	bicharada($leao,$final, $bicho, $x, $aposta, "leão");
+	bicharada($macaco,$final, $bicho, $x, $aposta, "macaco");
+	bicharada($porco,$final, $bicho, $x, $aposta, "porco");
+	bicharada($pavao,$final, $bicho, $x, $aposta, "pavão");
+	bicharada($peru,$final, $bicho, $x, $aposta, "peru");
+	bicharada($touro,$final, $bicho, $x, $aposta, "touro");
+	bicharada($tigre,$final, $bicho, $x, $aposta, "tigre");
+	bicharada($urso,$final, $bicho, $x, $aposta, "urso");
+	bicharada($veado,$final, $bicho, $x, $aposta, "veado");
+	bicharada($vaca,$final, $bicho, $x, $aposta, "vaca");
 }
 
 function jogador($ser, $bicho, $x, $aposta){
@@ -125,12 +100,15 @@ function jogador($ser, $bicho, $x, $aposta){
 			  }
 }
 
+function bicharada($bixo,$final, $bicho, $x, $aposta, $bichin){
+	for ($xy = 0; $xy < count($bixo); $xy++){
+	if($bixo[$xy] == $final){ echo "<img src='imagems/$bichin.png' height='100' width='100'> <br>"; jogador($bichin, $bicho, $x, $aposta);}}	
+}
+	
+	
+
 function checagem($bicho,$aposta, $milhar){
 	for($x = 0; $x < 5; $x++){
 	sorteio($milhar, $bicho, $aposta, $x);
 }}
-function checagemm($bicho,$aposta, $milhar){
-	for($x = 0; $x < 5; $x++){
-	sorteio($milhar, $bicho, $aposta, $x);
-	}}
 ?>
